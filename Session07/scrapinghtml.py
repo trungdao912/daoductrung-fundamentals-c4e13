@@ -2,6 +2,7 @@ from urllib.request import urlopen
 import urllib.request
 from bs4 import BeautifulSoup
 import pyexcel
+from youtube_dl import YoutubeDL
 
 url = "https://www.apple.com/itunes/charts/songs/"
 conn = urlopen(url)
@@ -28,4 +29,14 @@ for list in li_list:
     artist = y.string
     d.append({"title":title, "artist":artist})
 
-pyexcel.save_as(records = d, dest_file_name = "file1.xls")
+# pyexcel.save_as(records = d, dest_file_name = "file1.xls")
+
+options = {
+'default_search': 'ytsearch',
+'max_downloads': len(d),
+'format': 'bestaudio/audio'
+}
+
+dl = YoutubeDL(options)
+for i in d:
+    dl.download([i["title"] + i["artist"]])
