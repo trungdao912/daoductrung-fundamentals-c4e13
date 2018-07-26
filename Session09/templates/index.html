@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>C4E Blog</h1>
+    {% for post in posts %}
+        <div>
+            <!-- jinja2 -->
+            <h3>{{ post.title }}</h3>
+            <p>
+                {{ post.content}}
+            </p>
+            <i>
+                By {{ "Mr" if post.gender == 1 else "Miss" }}
+                {{ post.author }}
+            </i>
+        </div>
+    {% endfor %}
+    <!-- </div>
+<hr>
+    <div>
+        <h3>Tho xam</h3>
+        <p>
+            Ngoi buon ngam ngon tay choi
+            <br>
+            Ua sao ngon ngan ngon dai vay ta
+        </p>
+        <i>Unknown</i>
+    </div>
+<hr>
+    <div>
+        <h3>Kho 1</h3>
+        <p>
+            Nho ra da
+        </p>
+    </div>
+    <i>Unknown2</i> -->
+</body>
+<hr>
+</html>
