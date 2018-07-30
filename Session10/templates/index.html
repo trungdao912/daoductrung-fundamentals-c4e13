@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Warm Winter</title>
+</head>
+<body>
+    <h1>Warm Winter</h1>
+    <a href=" {{url_for('search', gender= 1)}} "> Man </a>
+    <br>
+    <a href=" {{url_for('search', gender= 0)}} "> Women </a>
+    <h3><a href=" {{url_for('customer')}} ">Not-yet-contacted customers </a></h3>
+    <h3><a href=" {{url_for('search_customer')}} ">10 first male</a></h3>
+</body>
+</html>
