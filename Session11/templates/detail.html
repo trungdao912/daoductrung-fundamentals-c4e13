@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>More Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+        <div>
+            <p><img src="{{ service.image }}"></p>
+            <b>Name: {{service.name}} </b>
+            <p>DOB: {{service.yob}} </p>
+            <p>Height: {{service.height}} </p>
+            <p>Description: {{service.description}} </p>
+            <p>Measurements: {{service.measurements[0]}} - {{service.measurements[1]}} - {{service.measurements[2]}} </p>
+        </div> 
+</body>
+</html>
