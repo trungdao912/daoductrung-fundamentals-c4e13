@@ -17,7 +17,11 @@ class Service(Document):
     image = StringField()
     description = StringField()
     measurements = ListField()
-    
+
+class River(Document):
+    name = StringField()
+    continent = StringField()
+    length = IntField()
 
 
 # new_service = Service(
