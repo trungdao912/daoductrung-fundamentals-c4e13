@@ -13,7 +13,7 @@ for i in range(50):
         yob = randint(1990, 2000),
         height = randint(150, 190),
         description = "Ngoan Hien Le Phep",
-        image = "http://writingexercises.co.uk/images2/randomimage/trafalgar.jpg",
+        image = "http://images6.fanpop.com/image/photos/40800000/jennie-black-pink-40840931-375-500.jpg",
         measurements = [90,60,90]
     )
     new_service.save()

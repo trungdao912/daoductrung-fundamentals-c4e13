@@ -57,7 +57,7 @@ def edit(service_id):
         height = form["height"]
         description = form["description"]
         image = form["image"]
-        Service.objects.with_id(service_id).update(set__name=name, set__yob=yob, set__height=height, set__image=image, set_description=description)
+        Service.objects.with_id(service_id).update(set__name=name, set__yob=yob, set__height=height, set__image=image, set__description=description)
         Service.objects.with_id(service_id).reload()
         return redirect(url_for("search"))
     
