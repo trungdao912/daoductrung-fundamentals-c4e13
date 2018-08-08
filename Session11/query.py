@@ -1,6 +1,7 @@
 from models.customer import *
 import mlab
 
+
 mlab.connect()
 
 id_to_find = "5b5f1528d7aadc29a4369fd5"
@@ -41,7 +42,8 @@ id_to_find = "5b5f1528d7aadc29a4369fd5"
 #         continue
 #     print(river["name"])
 
+# username = "Coltt"
 
+# user = User.objects(username="{0}".format(username))
 
-
-
+# print(user)

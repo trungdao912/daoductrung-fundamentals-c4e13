@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Warm Winter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Search page</h1>
+    <a href="{{ url_for("login") }}">Log In</a>
+    <a href="{{ url_for("logout") }}">Log Out</a>
+    <a href="{{ url_for("signin") }}">Sign In</a>
+    {% for service in all_service %}
+        <div>
+            <p><img src="{{ service.image }}"></p>
+            <b>Name: {{service.name}} </b>
+            <p>DOB: {{service.yob}} </p>
+            <p>Height: {{service.height}} </p>
+            <a href="{{  url_for("detail", service_id=service.id)  }}">More Info</a>
+            <a href="{{  url_for("edit", service_id=service.id)  }}">Edit</a>
+            <a href="{{  url_for("delete", service_id=service.id)  }}">Delete</a>
+            <hr>
+        </div>
+    {% endfor %}
+</body>
+</html>

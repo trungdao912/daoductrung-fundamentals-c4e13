@@ -1,4 +1,4 @@
-
+import datetime
 #desgin data base
 from mongoengine import *
 class Customer(Document):
@@ -23,6 +23,16 @@ class River(Document):
     continent = StringField()
     length = IntField()
 
+class User(Document):
+    username = StringField()
+    password = StringField()
+    email = EmailField()
+
+class Order(Document):
+    service_id = ReferenceField(Service)
+    is_accepted = BooleanField()
+    user_id = ReferenceField(User)
+    time = DateTimeField()
 
 # new_service = Service(
 #     name = "KennyZ",
